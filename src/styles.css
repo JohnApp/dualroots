@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+.grid-stack {
+  }
+  
+  .grid-stack-item-content {
+    color: #2c3e50;
+    text-align: center;
+  }
+.wx-100 {
+    width: 100px !important;
+}  
+.w-100 {
+    width: 100%;
+}
+.h-100 {
+    height: 100%;
+}
+.v-center {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    margin: auto;
+}
+.h-outlet {
+    height: calc(100vh-60px);
+}
+.grid.button.container {
+    padding-left: 0.7em;;
+}
+.grid-stack {
+    height: 100% !important;
+}
+.card-image {
+    background-image: url('https://picsum.photos/200/200');
+    background-size: 'cover';
+    background-repeat: no-repeat;
+}
