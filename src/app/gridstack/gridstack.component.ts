@@ -17,6 +17,7 @@ export class GridstackComponent {
   ctx: any;
   @ViewChild('mychart') mychart;
   viewCount: any = -1;
+  chartList:any;
   constructor() {}
 
   public ngOnInit() {
@@ -70,7 +71,7 @@ export class GridstackComponent {
     this.canvas = document.getElementById(id);
     this.ctx = this.canvas.getContext('2d');
 
-    let myChart = new Chart(this.ctx, {
+    this.chartList[id] = new Chart(this.ctx, {
       type: 'line',
       data: {
         labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -84,6 +85,10 @@ export class GridstackComponent {
           },
         ],
       },
+      options: {
+        responsive:true,
+        maintainAspectRatio: false 
+      }
     });
   }
 }
